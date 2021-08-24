@@ -1,26 +1,27 @@
 <!DOCTYPE html>
 <html>
- <head> 
-  <meta charset="UTF-8" /> 
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
-  <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.15.3/css/all.css" rel="stylesheet" /> 
-  <link rel="preconnect" href="https://fonts.googleapis.com" /> 
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" /> 
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;400;500;700;900&amp;display=swap" rel="stylesheet" /> 
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&amp;display=swap" rel="stylesheet" /> 
-  <title>Document</title> 
- </head> 
- <body> 
-  <style>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.15.3/css/all.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;400;500;700;900&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&amp;display=swap" rel="stylesheet" />
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        html{
-            min-width: 780px;
-        }
+
         /* div {
             background-color: rgba(0, 0, 255, 0.3);
         } */
@@ -132,7 +133,7 @@
         }
 
         .show {
-            width: 100%;
+            min-width: 90%;
             flex-direction: column;
             justify-content: center;
             align-items: center;
@@ -147,7 +148,7 @@
         .show-box {
             align-items: center;
             justify-content: space-evenly;
-            width: 100%;
+            width: 90%;
         }
 
         .card {
@@ -161,14 +162,14 @@
 
 
         .card>i {
-            font-size: 6rem;
+            font-size: 4rem;
         }
 
         .card>h2 {
-            font-size: 2.5rem;
+            font-size: 2rem;
         }
-        
-        .info{
+
+        .info {
             background-image: url(/img/bg-wool-dark.png);
             border-top: rgba(255, 255, 255, 0.16) 10px solid;
             justify-content: center;
@@ -177,86 +178,147 @@
             color: white;
         }
 
-        .info-box{
+        .info-box {
             min-width: 90%;
             justify-content: space-around;
             align-items: center;
         }
 
-        .info-left{
+        .info-left {
             flex-direction: column;
             justify-content: baseline;
             align-items: flex-start;
-            flex: 1;
         }
 
-        .info-right{
+        .info-right {
             flex-direction: column;
             justify-content: baseline;
             align-items: flex-end;
-            flex: 1;
         }
 
-    </style> 
+        @media screen and (max-width: 800px) {
+            .cover>h1 {
+                font-size: 2rem;
+            }
 
-  <div class="hero">       
-   <div class="navbar flex"> 
-    <div class="nav-left flex"> 
-     <a href=""> <i class="fa fa-bars"></i> </a> 
-    </div> 
-    <div class="nav-right flex"> 
-     <a href="spacemc.top:8123"> <i class="fa fa-map"></i> </a> 
-     <a href=""> <i class="fa fa-tshirt"> </i> </a> 
-     <a href="https://jq.qq.com/?_wv=1027&k=7cdE7jqF"> <i class="fab fa-qq"></i> </a> 
-     <a href=""> <i class="fas fa-info-circle"></i> </a> 
-    </div> 
-   </div> 
-   <div class="cover flex"> 
-    <h1>Simple Life</h1> 
-    <p>自由、可靠的公益 Minecraft 服务器</p> 
-    <a href="https://wj.qq.com/s2/8076650/6b2a" class="button"> 加入乐园 </a> 
-   </div> 
-  </div>
+            .cover>p {
+                font-size: 1.2rem;
+            }
 
-  <div class="show flex"> 
-   <div class="show-box flex"> 
-    <h1># SimpleLife 有什么优势？</h1> 
-   </div> 
-   <div class="show-box flex"> 
-    <div class="card flex"> 
-     <i class="fa fa-server"> </i> 
-     <h2>强劲配置</h2> 
-     <p>高达40核心128Gib内存</p> 
-     <p>独立物理机和1000M独立公网IP</p> 
-    </div> 
-    <div class="card flex"> 
-     <i class="fa fa-check"> </i> 
-     <h2>正版支持</h2> 
-     <p>支持正版验证</p> 
-     <p>维护良好Minecraft游戏环境</p> 
-    </div> 
-    <div class="card flex"> 
-     <i class="fa fa-dollar-sign"> </i> 
-     <h2>公益免费</h2> 
-     <p>由爱好者发起</p> 
-     <p>公益运营，维护社区环境</p> 
-    </div> 
-   </div> 
-  </div>
-  <div class="info flex">
-    <div class="info-box flex">
-        <div class="info-left flex">
-            <p>SimpleLife 服务器</p>
-            <p>一个“简单”的公益服务器</p>
+            .button {
+                text-decoration: none;
+                padding: 0.5rem 1rem;
+                font-size: 0.9rem;
+
+            }
+
+            .show-box>h1 {
+                font-size: 2rem;
+                margin: 0;
+            }
+
+            .show {
+                padding: 3rem 0;
+            }
+
+            .show-box {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 90%;
+            }
+
+            .card {
+                width: 90%;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-top: 3rem;
+            }
+
+            .info-box {
+                min-width: 90%;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+
+            .info-left {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .info-right {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    </style>
+
+    <div class="hero">
+        <div class="navbar flex">
+            <div class="nav-left flex">
+                <a href=""> <i class="fa fa-bars"></i> </a>
+            </div>
+            <div class="nav-right flex">
+                <a href="spacemc.top:8123"> <i class="fa fa-map"></i> </a>
+                <a href=""> <i class="fa fa-tshirt"> </i> </a>
+                <a href="https://jq.qq.com/?_wv=1027&k=7cdE7jqF"> <i class="fab fa-qq"></i> </a>
+                <a href=""> <i class="fas fa-info-circle"></i> </a>
+            </div>
         </div>
-        <div class="info-right flex">
-            <p>
-                made by <a href="https://github.com/nowcube">nowcube</a>
-            </p>
-            <p>"Minecraft"以及"我的世界"为Mojang Synergies AB的商标</p>
-            <p>本站与Mojang以及微软公司没有从属关系</p>
+        <div class="cover flex">
+            <h1>Simple Life</h1>
+            <p>自由、可靠的公益 Minecraft 服务器</p>
+            <a href="https://wj.qq.com/s2/8076650/6b2a" class="button"> 加入乐园 </a>
         </div>
     </div>
-</div>  
- </body>
+
+    <div class="show flex">
+        <div class="show-box flex">
+            <h1># SimpleLife 有什么优势？</h1>
+        </div>
+        <div class="show-box flex">
+            <div class="card flex">
+                <i class="fa fa-server"> </i>
+                <h2>强劲配置</h2>
+                <br>
+                <p>高达40核心128Gib内存</p>
+                <p>独立物理机和1000M独立公网IP</p>
+            </div>
+            <div class="card flex">
+                <i class="fa fa-check"> </i>
+                <h2>正版支持</h2>
+                <br>
+                <p>支持正版验证</p>
+                <p>维护良好Minecraft游戏环境</p>
+            </div>
+            <div class="card flex">
+                <i class="fa fa-dollar-sign"> </i>
+                <h2>公益免费</h2>
+                <br>
+                <p>由爱好者发起</p>
+                <p>公益运营，维护社区环境</p>
+            </div>
+        </div>
+    </div>
+    <div class="info flex">
+        <div class="info-box flex">
+            <div class="info-left flex">
+                <p>SimpleLife 服务器</p>
+                <p>一个“简单”的公益服务器</p>
+            </div>
+            <div class="info-right flex">
+                <p>
+                    made by <a href="https://github.com/nowcube">nowcube</a>
+                </p>
+                <p>"Minecraft"以及"我的世界"为Mojang Synergies AB的商标</p>
+                <p>本站与Mojang以及微软公司没有从属关系</p>
+            </div>
+        </div>
+    </div>
+</body>
+
 </html>
