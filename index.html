@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+ <head> 
+  <meta charset="UTF-8" /> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+  <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.15.3/css/all.css" rel="stylesheet" /> 
+  <link rel="preconnect" href="https://fonts.googleapis.com" /> 
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" /> 
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;400;500;700;900&amp;display=swap" rel="stylesheet" /> 
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&amp;display=swap" rel="stylesheet" /> 
+  <title>Document</title> 
+ </head> 
+ <body> 
+  <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html{
+            min-width: 780px;
+        }
+        /* div {
+            background-color: rgba(0, 0, 255, 0.3);
+        } */
+
+        body {
+            background-image: url(/img/bg-wool-light.png);
+            font-family: 'Noto Sans SC', sans-serif;
+            color: rgb(33, 37, 41);
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .navbar {
+            height: 4rem;
+            justify-content: space-between;
+            background-image: url(/img/bg-wool-dark.png);
+            box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.16), 0 3px 3px 0 rgba(0, 0, 0, 0.23);
+            position: fixed;
+            width: 100%;
+            top: 0;
+        }
+
+        .nav-left {
+            /* width: 160px; */
+            align-items: center;
+            justify-content: center;
+        }
+
+        .nav-right {
+            /* width: 320px; */
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        i {
+            font-size: 1.3em;
+        }
+
+        .nav-left>a>i {
+            width: 80px;
+        }
+
+        .nav-right>a {
+            width: 4rem;
+        }
+
+        .cover {
+            /* margin-top: ; */
+            /* height: calc(100vh - 80px); */
+            height: 100vh;
+            width: 100%;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cover>h1 {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 3em;
+            font-weight: 300;
+            color: rgb(255, 255, 255);
+            text-shadow: black 0.1em 0.1em 0.2em;
+            margin-top: 5rem;
+            padding: 3rem;
+        }
+
+        .cover>p {
+            padding: 1rem;
+            font-size: 1.5rem;
+            color: rgb(239, 239, 239);
+            text-shadow: black 0.1em 0.1em 0.2em;
+
+        }
+
+        .button {
+            background-color: #36b030;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            text-decoration: none;
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            margin-top: 1rem;
+            /* line-height: 1.5; */
+            letter-spacing: 0.1rem;
+            box-shadow: 0 -4px rgb(21 108 0 / 50%) inset, 0 4px rgb(100 253 31 / 99%) inset, -4px 0 rgb(100 253 31 / 50%) inset, 4px 0 rgb(21 108 0 / 50%) inset;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            text-align: center;
+        }
+
+        a>i {
+            color: rgb(239, 239, 239);
+        }
+
+        .hero {
+            height: 100vh;
+            width: 100%;
+            background-image: url(/img/cover.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .show {
+            width: 100%;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-top: rgba(0, 0, 0, 0.16) 10px solid;
+        }
+
+        .show-box>h1 {
+            margin-top: 3rem;
+            font-size: 3rem;
+        }
+
+        .show-box {
+            align-items: center;
+            justify-content: space-evenly;
+            width: 100%;
+        }
+
+        .card {
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 300px;
+            flex: 1;
+            width: 30px;
+        }
+
+
+        .card>i {
+            font-size: 6rem;
+        }
+
+        .card>h2 {
+            font-size: 2.5rem;
+        }
+        
+        .info{
+            background-image: url(/img/bg-wool-dark.png);
+            border-top: rgba(255, 255, 255, 0.16) 10px solid;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+            color: white;
+        }
+
+        .info-box{
+            min-width: 90%;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .info-left{
+            flex-direction: column;
+            justify-content: baseline;
+            align-items: flex-start;
+            flex: 1;
+        }
+
+        .info-right{
+            flex-direction: column;
+            justify-content: baseline;
+            align-items: flex-end;
+            flex: 1;
+        }
+
+    </style> 
+
+  <div class="hero">       
+   <div class="navbar flex"> 
+    <div class="nav-left flex"> 
+     <a href=""> <i class="fa fa-bars"></i> </a> 
+    </div> 
+    <div class="nav-right flex"> 
+     <a href="spacemc.top:8123"> <i class="fa fa-map"></i> </a> 
+     <a href=""> <i class="fa fa-tshirt"> </i> </a> 
+     <a href="https://jq.qq.com/?_wv=1027&k=7cdE7jqF"> <i class="fab fa-qq"></i> </a> 
+     <a href=""> <i class="fas fa-info-circle"></i> </a> 
+    </div> 
+   </div> 
+   <div class="cover flex"> 
+    <h1>Simple Life</h1> 
+    <p>自由、可靠的公益 Minecraft 服务器</p> 
+    <a href="https://wj.qq.com/s2/8076650/6b2a" class="button"> 加入乐园 </a> 
+   </div> 
+  </div>
+
+  <div class="show flex"> 
+   <div class="show-box flex"> 
+    <h1># SimpleLife 有什么优势？</h1> 
+   </div> 
+   <div class="show-box flex"> 
+    <div class="card flex"> 
+     <i class="fa fa-server"> </i> 
+     <h2>强劲配置</h2> 
+     <p>高达40核心128Gib内存</p> 
+     <p>独立物理机和1000M独立公网IP</p> 
+    </div> 
+    <div class="card flex"> 
+     <i class="fa fa-check"> </i> 
+     <h2>正版支持</h2> 
+     <p>支持正版验证</p> 
+     <p>维护良好Minecraft游戏环境</p> 
+    </div> 
+    <div class="card flex"> 
+     <i class="fa fa-dollar-sign"> </i> 
+     <h2>公益免费</h2> 
+     <p>由爱好者发起</p> 
+     <p>公益运营，维护社区环境</p> 
+    </div> 
+   </div> 
+  </div>
+  <div class="info flex">
+    <div class="info-box flex">
+        <div class="info-left flex">
+            <p>SimpleLife 服务器</p>
+            <p>一个“简单”的公益服务器</p>
+        </div>
+        <div class="info-right flex">
+            <p>
+                made by <a href="https://github.com/nowcube">nowcube</a>
+            </p>
+            <p>"Minecraft"以及"我的世界"为Mojang Synergies AB的商标</p>
+            <p>本站与Mojang以及微软公司没有从属关系</p>
+        </div>
+    </div>
+</div>  
+ </body>
+</html>
