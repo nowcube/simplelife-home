@@ -180,10 +180,11 @@
 
         .info-box {
             min-width: 90%;
-            justify-content: space-around;
+            justify-content: center;
             align-items: center;
+            flex-direction: column;
         }
-
+/* 
         .info-left {
             flex-direction: column;
             justify-content: baseline;
@@ -194,15 +195,15 @@
             flex-direction: column;
             justify-content: baseline;
             align-items: flex-end;
-        }
+        } */
 
         @media screen and (max-width: 800px) {
             .cover>h1 {
-                font-size: 2rem;
+                font-size: 1.5rem;
             }
 
             .cover>p {
-                font-size: 1.2rem;
+                font-size: 1rem;
             }
 
             .button {
@@ -213,7 +214,7 @@
             }
 
             .show-box>h1 {
-                font-size: 2rem;
+                font-size: 1.5rem;
                 margin: 0;
             }
 
@@ -236,13 +237,22 @@
                 margin-top: 3rem;
             }
 
+            .card > i{
+                font-size: 2.5rem;
+            }
+
+            .card > h2{
+                font-size: 1.5rem;
+            }
+
             .info-box {
                 min-width: 90%;
                 justify-content: center;
                 align-items: center;
                 flex-direction: column;
+                font-size: 0.9rem;
             }
-
+/* 
             .info-left {
                 flex-direction: column;
                 justify-content: center;
@@ -253,7 +263,9 @@
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-            }
+            } */
+
+            
         }
     </style>
 
@@ -284,21 +296,18 @@
             <div class="card flex">
                 <i class="fa fa-server"> </i>
                 <h2>强劲配置</h2>
-                <br>
                 <p>高达40核心128Gib内存</p>
                 <p>独立物理机和1000M独立公网IP</p>
             </div>
             <div class="card flex">
                 <i class="fa fa-check"> </i>
                 <h2>正版支持</h2>
-                <br>
                 <p>支持正版验证</p>
                 <p>维护良好Minecraft游戏环境</p>
             </div>
             <div class="card flex">
                 <i class="fa fa-dollar-sign"> </i>
                 <h2>公益免费</h2>
-                <br>
                 <p>由爱好者发起</p>
                 <p>公益运营，维护社区环境</p>
             </div>
@@ -306,17 +315,12 @@
     </div>
     <div class="info flex">
         <div class="info-box flex">
-            <div class="info-left flex">
-                <p>SimpleLife 服务器</p>
-                <p>一个“简单”的公益服务器</p>
-            </div>
-            <div class="info-right flex">
-                <p>
-                    made by <a href="https://github.com/nowcube">nowcube</a>
-                </p>
-                <p>"Minecraft"以及"我的世界"为Mojang Synergies AB的商标</p>
-                <p>本站与Mojang以及微软公司没有从属关系</p>
-            </div>
+            <i class="fa fa-heart"></i>
+            <br>
+            <p>
+                SimpleLife 服务器，一个“简单”的公益服务器
+            </p>
+            <p>made by <a href="https://github.com/nowcube">nowcube</a></p>
         </div>
     </div>
 </body>
